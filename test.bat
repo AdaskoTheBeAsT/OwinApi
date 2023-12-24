@@ -1,0 +1,1 @@
+dotnet test OwinWebApi.sln --collect "Code Coverage" --collect:"XPlat Code Coverage;Format=opencover,cobertura" --logger:"trx" --results-directory:"./TestResults"
