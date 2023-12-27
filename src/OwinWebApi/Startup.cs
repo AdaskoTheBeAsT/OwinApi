@@ -8,12 +8,13 @@ using Owin;
 using OwinWebApi;
 
 [assembly: OwinStartup(typeof(Startup))]
+
 namespace OwinWebApi
 {
     public class Startup
         : IDisposable
     {
-        private HttpConfiguration _httpConfiguration;
+        private HttpConfiguration? _httpConfiguration;
 
         public void Configuration(IAppBuilder app)
         {
@@ -22,7 +23,6 @@ namespace OwinWebApi
 
             ConfigureFormatter();
             ConfigureRouting();
-            
 
             app.UseWebApi(_httpConfiguration);
         }
@@ -58,7 +58,7 @@ namespace OwinWebApi
 
             JsonConvert.DefaultSettings = () => defaultSettings;
 
-            _httpConfiguration.Formatters.Clear();
+            _httpConfiguration!.Formatters.Clear();
             _httpConfiguration.Formatters.Add(new JsonMediaTypeFormatter());
             _httpConfiguration.Formatters.JsonFormatter.SerializerSettings = defaultSettings;
         }
@@ -66,9 +66,9 @@ namespace OwinWebApi
         private void ConfigureRouting()
         {
             // Web API routes
-            _httpConfiguration.MapHttpAttributeRoutes();
+            _httpConfiguration!.MapHttpAttributeRoutes();
 
-            _httpConfiguration.Routes.MapHttpRoute(
+            _httpConfiguration!.Routes.MapHttpRoute(
                 name: "Owin Web API",
                 routeTemplate: "{controller}/{id}",
                 defaults: new { controller = "Home", id = RouteParameter.Optional });

@@ -12,8 +12,8 @@ namespace OwinWebApiTest
         public async Task HomeTestAsync()
         {
             using (var server = TestServer.Create<Startup>())
+            using (var response = await server.HttpClient.GetAsync("/"))
             {
-                var response = await server.HttpClient.GetAsync("/");
                 response.EnsureSuccessStatusCode();
                 var responseString = await response.Content.ReadAsStringAsync();
                 responseString.Should().Be("\"API Works\"");

@@ -8,6 +8,10 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
+[*.props]
+indent_style = space
+indent_size = 2
+
 [*.{cs,vb}]
 #### Naming styles ####
 

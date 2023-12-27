@@ -1,1 +1,1 @@
-msbuild ./OwinWebApi/OwinWebApi.csproj /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+msbuild ./src/OwinWebApi/OwinWebApi.csproj /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
