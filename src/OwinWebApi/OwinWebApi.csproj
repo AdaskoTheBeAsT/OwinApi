@@ -6,7 +6,7 @@
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GeneratedBindingRedirectsAction>Overwrite</GeneratedBindingRedirectsAction>
-    <MicrosoftNetCompilersToolset_Version>4.8.0</MicrosoftNetCompilersToolset_Version>
+    <MicrosoftNetCompilersToolset_Version>4.9.2</MicrosoftNetCompilersToolset_Version>
     <MicrosoftCodeDomProvidersDotNetCompilerPlatform_Version>4.1.0</MicrosoftCodeDomProvidersDotNetCompilerPlatform_Version>
   </PropertyGroup>
 
